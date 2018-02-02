@@ -33,6 +33,8 @@ public class MyServivice extends Service {
         return START_STICKY;
     }
 
+
+
     public void getNotification() {
 
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);

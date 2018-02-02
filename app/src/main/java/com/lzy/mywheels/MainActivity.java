@@ -7,8 +7,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.lzy.mywheels.Broadcast.RecycleViewActivity;
-import com.lzy.mywheels.ModleTest.TestModleActivity;
-import com.lzy.mywheels.okhttp.OkHttpActivity;
+import com.lzy.mywheels.counttime.TimeActivity;
+import com.lzy.mywheels.ijkplayer.PlayerActivity;
+import com.lzy.mywheels.viewtest.TestModleActivity;
 import com.lzy.mywheels.update.UpDateActivity;
 
 import butterknife.BindView;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, UpDateActivity.class);
+                Intent intent = new Intent(MainActivity.this, PlayerActivity.class);
 //                intent.putExtra("sign",1);
 
                 startActivity(intent);
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, TestModleActivity.class);
+
 //                intent.putExtra("sign",2);
                 startActivity(intent);
             }

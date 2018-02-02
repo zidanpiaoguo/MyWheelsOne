@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.bumptech.glide.Glide;
 import com.lzy.mywheels.R;
 import com.shuyu.gsyvideoplayer.builder.GSYVideoOptionBuilder;
 import com.shuyu.gsyvideoplayer.listener.LockClickListener;
@@ -40,11 +41,16 @@ public class PlayerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
         ButterKnife.bind(this);
-        String url = "http://baobab.wdjcdn.com/14564977406580.mp4";
+        String url = "http://vod.dev.51zhiyuan.net/vod/1516601118330.mp4";
         //增加封面
         ImageView imageView = new ImageView(this);
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        imageView.setImageResource(R.mipmap.xxx1);
+//        imageView.setImageResource(R.mipmap.xxx1);
+        Glide.with(this)
+                .load(url)
+                .into(imageView);
+
+
         resolveNormalVideoUI();
 
         //外部辅助的旋转，帮助全屏

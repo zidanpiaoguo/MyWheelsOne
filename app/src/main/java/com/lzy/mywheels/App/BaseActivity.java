@@ -8,6 +8,7 @@ import butterknife.ButterKnife;
 
 
 /**
+ *
  * Created by zidan on 2017/8/30.
  */
 public abstract class BaseActivity extends FragmentActivity {
@@ -40,6 +41,7 @@ public abstract class BaseActivity extends FragmentActivity {
 
     @Override
     protected void onDestroy() {
+
         super.onDestroy();
         ActivityCollector.removeActivty(this);
     }

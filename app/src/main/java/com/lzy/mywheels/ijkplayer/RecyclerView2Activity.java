@@ -120,8 +120,6 @@ public class RecyclerView2Activity extends AppCompatActivity {
 
             }
         });
-
-
     }
 
     @Override

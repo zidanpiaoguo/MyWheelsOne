@@ -6,14 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context="com.lzy.mywheels.ModleTest.TestModleActivity">
 
-    <TextView
-        android:id="@+id/nihao"
+    tools:context="com.lzy.mywheels.viewtest.TestModleActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_touch_event"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/nihao"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/divider_color"
+            />
+
+
+    </LinearLayout>
+
+
+    <com.lzy.mywheels.viewtest.RegionClickView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="测试"
-        />
-
+        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -6,6 +6,7 @@ import android.view.View;
 import com.shuyu.gsyvideoplayer.utils.ListVideoUtil;
 
 /**
+ *
  * Created by shuyu on 2016/12/3.
  */
 

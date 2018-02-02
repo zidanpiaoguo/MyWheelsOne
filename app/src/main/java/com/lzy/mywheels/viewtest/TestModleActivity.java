@@ -1,8 +1,10 @@
-package com.lzy.mywheels.ModleTest;
+package com.lzy.mywheels.viewtest;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.lzy.mywheels.R;
@@ -14,6 +16,8 @@ public class TestModleActivity extends AppCompatActivity {
 
     @BindView(R.id.nihao)
     TextView nihao;
+    @BindView(R.id.ll_touch_event)
+    LinearLayout llTouchEvent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +28,13 @@ public class TestModleActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        nihao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-//            LoadingDialog dialog=new LoadingDialog(getApplicationContext());
-//            dialog.canShow();
 
-            }
-        });
+
+
+
+
     }
+
+
 }

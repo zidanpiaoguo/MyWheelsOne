@@ -50,15 +50,19 @@ public class EventTestActivity extends AppCompatActivity {
             }
         });
 
-//        //注册事件
-//        EventBus.getDefault().register(this);
+        if (!EventBus.getDefault().isRegistered(this)) {
+                    //注册事件
+                EventBus.getDefault().register(this);
+        }
+
 
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        EventBus.getDefault().unregister(this);
+        if(EventBus.getDefault().isRegistered(this))
+            EventBus.getDefault().unregister(this);
     }
 
 //    @Subscribe(threadMode = ThreadMode.MAIN)
@@ -66,8 +70,16 @@ public class EventTestActivity extends AppCompatActivity {
 //        tvMessage.setText(messageEvent.getMessage());
 //    }
 
-    @Subscribe(threadMode = ThreadMode.MAIN,sticky=true)
-    public void onTest(MessageEvent messageEvent){
+    /**
+     * 粘性广播事件
+     *
+     * 是先发送事件，再绑定事件也是可以收到的事件的。
+     *
+     * 主要是场景就是先发送，后绑定。
+     * @param messageEvent
+     */
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onTest(MessageEvent messageEvent) {
 
         tvMessage.setText(messageEvent.getMessage());
 
