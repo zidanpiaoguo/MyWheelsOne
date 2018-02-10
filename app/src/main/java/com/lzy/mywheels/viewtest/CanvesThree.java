@@ -88,6 +88,8 @@ public class CanvesThree  extends View {
 
 
 
+
+
 //
 //        Path path = new Path();
 //
@@ -121,7 +123,7 @@ public class CanvesThree  extends View {
         int centerX = widthsize/2;
         int centerY = heightsize/2;
         float radius = Math.min(heightsize, widthsize)/2*0.9f;
-         float angle = (float) (Math.PI*2/count);
+        float angle = (float) (Math.PI*2/count);
         Path path = new Path();
         float r = radius/(count-1);//r是蜘蛛丝之间的间距
         for(int i=1;i<count;i++){//中心点不用绘制

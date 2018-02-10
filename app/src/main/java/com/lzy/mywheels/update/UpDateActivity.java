@@ -44,7 +44,7 @@ public class UpDateActivity extends AppCompatActivity {
         tvUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showUpdateDialog("1.0", "http://106.14.249.176:8080/app/freebuy.apk");
+                showUpdateDialog("1.0", "http://47.97.223.94/apk/日本城_1.2.apk");
             }
         });
     }
@@ -118,16 +118,18 @@ public class UpDateActivity extends AppCompatActivity {
                     @Override
                     public void onError(Call call, Exception e, int id) {
                         progressDialog.dismiss();
+                        Log.d(TAG, "onError: "+e.getMessage());
                         //跳转到应用市场
                         //我这里只是到百度。
                         Intent intent = new Intent("android.intent.action.VIEW");
-                        String market = "www.baidu.com";
+                        String market = "http://www.baidu.com";
                         intent.setData(Uri.parse(market));
                         startActivity(intent);
                     }
 
                     @Override
                     public void onResponse(File response, int id) {
+                        Log.d(TAG, "onResponse: ");
                         progressDialog.dismiss();
                         String dirPath = response.getAbsolutePath(); //文件需有可读权限
                         Log.d(TAG, "onResponse: "+dirPath);
