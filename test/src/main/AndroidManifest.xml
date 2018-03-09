@@ -10,18 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".start.Text1Activity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".start.Text1Activity"></activity>
         <activity android:name=".start.Test2Activity" />
         <activity android:name=".annotation.AnnotationActivity">
+
+        </activity>
+        <activity android:name=".multitouch.TouchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
